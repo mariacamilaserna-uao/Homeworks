@@ -1,0 +1,91 @@
+.cola-container {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.cola-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.total-personas {
+  margin: 0 0 15px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cola-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cola-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.cola-item:last-child {
+  border-bottom: none;
+}
+
+.posicion {
+  font-weight: bold;
+  color: #007bff;
+  min-width: 30px;
+}
+
+.cola-item .info {
+  flex: 1;
+  margin: 0;
+}
+
+.cola-item strong {
+  display: block;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.cola-item .monto {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.tiempos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.cola-item .hora {
+  font-size: 0.85rem;
+  color: #999;
+  white-space: nowrap;
+}
+
+.cola-item .espera {
+  font-size: 0.8rem;
+  color: #666;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.cola-vacia {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+

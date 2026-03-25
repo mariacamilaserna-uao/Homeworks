@@ -1,0 +1,201 @@
+.pila-wrapper {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.pila-header {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pila-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.usuario-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.logout-btn-pila {
+  padding: 10px 20px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-btn-pila:hover {
+  background: #c0392b;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.seccion-formulario {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.seccion-formulario h2 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.seccion-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.seccion-formulario input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.seccion-formulario input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.seccion-formulario button {
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.seccion-formulario button:hover {
+  background: #5568d3;
+}
+
+.seccion-libros {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera-libros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cabecera-libros h2 {
+  color: #333;
+  font-size: 18px;
+  margin: 0;
+}
+
+.btn-sacar {
+  padding: 10px 20px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-sacar:hover {
+  background: #c0392b;
+}
+
+.vacia {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.lista-libros {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-libro {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #667eea;
+}
+
+.numero {
+  background: #667eea;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.info-libro h3 {
+  color: #333;
+  font-size: 15px;
+  margin: 0 0 10px 0;
+}
+
+.info-libro p {
+  color: #666;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.info-libro strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-formulario {
+    height: auto;
+  }
+}

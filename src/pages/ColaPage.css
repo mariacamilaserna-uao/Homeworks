@@ -1,0 +1,53 @@
+.cola-page-wrapper {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.cola-page-header {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cola-page-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.logout-btn-cola {
+  padding: 10px 20px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-btn-cola:hover {
+  background: #c0392b;
+}
+
+.cola-page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .contenedor-principal {
+    grid-template-columns: 1fr;
+  }
+}

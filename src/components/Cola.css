@@ -1,0 +1,92 @@
+.cola-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.cola-container h2 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.total-personas {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+.cola-vacia {
+  color: #999;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.cola-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cola-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.cola-item:last-child {
+  border-bottom: none;
+}
+
+.posicion {
+  background: #667eea;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+}
+
+.info strong {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.monto {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0;
+}
+
+.tiempos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+}
+
+.hora {
+  font-weight: 600;
+}
+
+.espera {
+  color: #999;
+}

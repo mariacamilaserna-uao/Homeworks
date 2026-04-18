@@ -1,0 +1,293 @@
+@import './variables.scss';
+
+.tasks-page {
+  min-height: 100vh;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-header {
+  background-color: $surface;
+  padding: 20px $spacing;
+  border-bottom: 1px solid $border;
+  box-shadow: $shadow;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $text;
+    margin: 0;
+  }
+
+  .header-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    span {
+      color: $text-secondary;
+      font-size: 14px;
+    }
+
+    .btn-logout {
+      background-color: $danger;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: $radius;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: darken($danger, 10%);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.tasks-main {
+  flex: 1;
+  padding: $spacing;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.task-form-container {
+  background-color: $surface;
+  padding: $spacing;
+  border-radius: $radius;
+  box-shadow: $shadow;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: $text;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+
+    .task-input,
+    .task-textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid $border;
+      border-radius: $radius;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.1);
+      }
+
+      &::placeholder {
+        color: $text-secondary;
+      }
+    }
+
+    .task-textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+  }
+
+  .btn-add {
+    width: 100%;
+    padding: 12px;
+    background-color: $success;
+    color: white;
+    border: none;
+    border-radius: $radius;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover:not(:disabled) {
+      background-color: darken($success, 10%);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .error-message {
+    background-color: #fee;
+    color: #c33;
+    padding: 12px;
+    border-radius: $radius;
+    margin-bottom: 16px;
+    border-left: 4px solid #c33;
+    font-size: 13px;
+  }
+}
+
+.tasks-list {
+  background-color: $surface;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow: hidden;
+
+  .no-tasks {
+    padding: $spacing;
+    text-align: center;
+    color: $text-secondary;
+    font-size: 16px;
+  }
+
+  .task-item {
+    padding: $spacing;
+    border-bottom: 1px solid $border;
+    transition: background-color 0.3s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #f3f4f6;
+    }
+
+    &.completed {
+      opacity: 0.7;
+
+      .task-text h3 {
+        text-decoration: line-through;
+        color: $text-secondary;
+      }
+    }
+
+    .task-content {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+
+      .task-checkbox {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        cursor: pointer;
+        accent-color: $success;
+      }
+
+      .task-text {
+        flex: 1;
+
+        h3 {
+          margin: 0 0 4px 0;
+          font-size: 16px;
+          font-weight: 600;
+          color: $text;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+          color: $text-secondary;
+        }
+      }
+    }
+
+    .task-buttons,
+    .edit-buttons {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+
+      button {
+        padding: 6px 12px;
+        font-size: 13px;
+        border: none;
+        border-radius: $radius;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-edit {
+        background-color: $primary;
+        color: white;
+
+        &:hover {
+          background-color: $primary-dark;
+        }
+      }
+
+      .btn-delete {
+        background-color: $danger;
+        color: white;
+
+        &:hover {
+          background-color: darken($danger, 10%);
+        }
+      }
+
+      .btn-save {
+        background-color: $success;
+        color: white;
+
+        &:hover {
+          background-color: darken($success, 10%);
+        }
+      }
+
+      .btn-cancel {
+        background-color: $border;
+        color: $text;
+
+        &:hover {
+          background-color: darken($border, 10%);
+        }
+      }
+    }
+
+    .task-edit {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid $primary;
+        border-radius: $radius;
+        font-size: 14px;
+        font-family: inherit;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba($primary, 0.1);
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+    }
+  }
+}
